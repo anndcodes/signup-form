@@ -1,0 +1,145 @@
+:root {
+  /* colors */
+  --primary-color: #6ea4c4;
+  --background-color: #EEE6DF;
+  --text-color: #383736;
+  --input-border: #988D7D;
+  --input-background: rgba(236, 236, 236, 0.3);
+  --shadow: #cdcecf;
+  --button-active: #b3c0c9;
+  --button-color: #f7fafc;
+  --input-border-focus: #D2DCE2;
+
+  /* fonts */
+  --zodiak: 'Zodiak', serif;
+  --poppins: 'Poppins', sans-serif;
+}
+
+/* ==== resets ==== */
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  display: flex;
+  font-family: var(--zodiak);
+  font-size: 1.5rem;
+  color: var(--text-color);
+}
+
+/* ==== header ==== */
+header {
+  width: 50vw;
+  height: 100vh;
+}
+
+header img {
+  max-width: 100%;
+  height: 100%;
+}
+
+/* ==== main ==== */
+main {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: var(--background-color);
+}
+
+.form_desc {
+  width: 75%;
+  padding-bottom: 10px;
+}
+
+.form_desc h2 {
+  padding-top: 10px;
+}
+
+.info {
+  margin: 5rem 0 5rem;
+}
+
+.user_full_name, 
+.user_contact,
+.user_password {
+  display: flex;
+  gap: 10rem;
+}
+
+.form_section {
+  margin: 15rem;
+}
+
+a, 
+h2,
+button, 
+.info {
+  font-family: var(--poppins);
+}
+
+a, 
+.desc_span, 
+h2, 
+span {
+  color: var(--primary-color);
+  font-weight: 800;
+}
+
+/* ==== form inputs and button ==== */
+label {
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  display: block;
+  margin-bottom: 4px;
+}
+
+input {
+  border-bottom: 1px solid var(--input-border);
+  border-radius: 5px;
+  width: 280px;
+  height: 40px;
+  padding: 10px;
+  background: var(--input-background);
+  font-family: inherit;
+  font-size: 1.5rem;
+  margin-bottom: 25px;
+}                                                                                                                                                            
+input:focus {
+  box-shadow: 2px 2px 2px 1px var(--shadow);
+  outline: none;
+  border: 2px solid var(--input-border-focus);
+}
+
+button {
+  background: var(--primary-color);
+  padding: 13px 35px;
+  font-size: 1.5rem;
+  border-radius: 7px;
+  cursor: pointer;
+  margin-top: -20px;
+  margin-bottom: 30px;
+  color: var(--button-color);
+  font-weight: 600;
+  box-shadow: 5px 5px 5px 1px var(--shadow);
+}    
+
+button:hover {
+  transform: translateY(-1px);
+  box-shadow: 7px 7px 7px 1px var(--shadow);
+}
+
+button:active {
+  background: var(--button-active);
+  box-shadow: 1px 1px 1px 1px var(--shadow);
+}
+

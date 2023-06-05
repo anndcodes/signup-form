@@ -7,6 +7,7 @@
   <title>Sign-Up Form</title>
   <link rel="stylesheet" href="style.css">
   <link href="https://api.fontshare.com/v2/css?f[]=zodiak@901,700,800,401,400,801,701,900&f[]=poppins@401,301,500,400,300,501&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="assets/coffee-cup.png" type="image/x-icon">
 </head>
 <body>
   <header>
@@ -25,7 +26,7 @@
           <div class="info">
             <div class="user_full_name">
               <div class="first_name">
-                <label for="first_name">first name <span>*</span></label>
+                <label for="first_name">first name <span class="asterisk">*</span></label>
                 <input type="text" name="first_name" id="first_name" required>
               </div>
               <div class="last_name">
@@ -36,7 +37,7 @@
 
             <div class="user_contact">
               <div class="email">
-                <label for="user_email">email <span>*</span></label>
+                <label for="user_email">email <span class="asterisk">*</span></label>
                 <input type="email" id="user_email" name="user_email" required>
               </div>
               <div class="phone_num">
@@ -47,12 +48,12 @@
 
             <div class="user_password">
               <div class="password">
-                <label for="user_password">password <span>*</span></label>
+                <label for="user_password">password <span class="asterisk">*</span></label>
                 <input type="password" id="user_password" name="user_password" required>
               </div>
               
               <div class="confirm_password">
-                <label for="confirm_password">confirm password <span>*</span></label>
+                <label for="confirm_password">confirm password <span class="asterisk">*</span></label>
                 <input type="password" id="confirm_password" name="confirm_password" required>
               </div>
             </div>
@@ -60,12 +61,22 @@
 
           <div class="create_account">
             <button type="submit">Create Account</button>
-            <p>Already have an account? <a href="#">Log in</a></p>
+            <p>Already have an account? <a href="#" class="login">Log in</a></p>
           </div>
         </form>
       </div>
+      
     </section>
+    <footer>
+      <p>made with <span class="icon" title="love"><ion-icon name="heart-outline"></ion-icon></span> by <em>Annd</em> at <span><a class="icon" href="https://github.com/anndcodes/signup-form">
+        <ion-icon name="logo-github"></ion-icon>
+      </a></span></p>
+    </footer>
   </main>
+
+  <!-- ==== icons script ==== -->
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
 

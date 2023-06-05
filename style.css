@@ -80,17 +80,17 @@ main {
   margin: 15rem;
 }
 
-a, 
+.login, 
 h2,
 button, 
 .info {
   font-family: var(--poppins);
 }
 
-a, 
+.login, 
 .desc_span, 
 h2, 
-span {
+.asterisk {
   color: var(--primary-color);
   font-weight: 800;
 }
@@ -143,3 +143,13 @@ button:active {
   box-shadow: 1px 1px 1px 1px var(--shadow);
 }
 
+footer {
+  margin-top: auto;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.icon,
+footer em {
+  color: var(--primary-color);
+}

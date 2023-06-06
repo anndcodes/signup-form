@@ -37,14 +37,22 @@ body {
 
 /* ==== header ==== */
 header {
-  width: 50vw;
-  height: 100vh;
+  display: flex;
+  align-items: flex-end;
+  position: relative;
 }
 
 header img {
-  max-width: 100%;
-  height: 100%;
+  height: max(100vh, 50vh);
 }
+
+.header_footer {
+  position: absolute;
+  width: 100%;
+  font-size: 1.4rem;
+  color: var(--button-color);
+}
+
 
 /* ==== main ==== */
 main {
@@ -150,6 +158,7 @@ footer {
 }
 
 .icon,
+.link_credit,
 footer em {
   color: var(--primary-color);
 }

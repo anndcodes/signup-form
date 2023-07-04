@@ -10,66 +10,81 @@
   <link rel="shortcut icon" href="assets/coffee-cup.png" type="image/x-icon">
 </head>
 <body>
-  <header>
-    <img src="assets/coffee-header.png" alt="">
-    <footer class="header_footer">
+  <!-- sidebar -->
+  <aside class="sidebar">
+    <img class="sidebar_image" src="assets/coffee-header.png" alt="A blue cup with hot coffee.">
+    <footer class="sidebar_footer">
       <p>Photo by <a class="link_credit" href="https://unsplash.com/photos/4wl5IjEiW3A">Matt Higham</a> on <a class="link_credit" href="https://unsplash.com/">Unsplash</a></p>
     </footer>
-  </header>
+  </aside>
 
+  <!-- main -->
   <main>
     <section class="form_section">
-      <div class="form_desc">
-        <h1>Sign-up to order coffee at your house, your work or anywhere you are! It's easy and you still receive our newsletter every week, for you, who like us, <span class="desc_span"><em>love coffee :)</em></span></h1>
+      <!-- header -->
+      <header class="form_header">
+        <h1>Sign-up to order coffee at your house, your work or anywhere you want! It's easy and you still receive our weekly newsletter, for you, who like us, <span class="desc_span"><em>love coffee :)</em></span></h1>
         <h2>Sign-up now!</h2>
-      </div>
+      </header>
 
-      <div class="form">
-        <form action="#" method="get">
-          <div class="info">
-            <div class="user_full_name">
-              <div class="first_name">
-                <label for="first_name">first name <span class="asterisk">*</span></label>
-                <input type="text" name="first_name" id="first_name" required>
-              </div>
-              <div class="last_name">
-                <label for="last_name">last name</label>
-                <input type="text" name="last_name" id="last_name">
-              </div>
+      <form action="http://httpbin.org/post" method="post">
+        <section class="form_info">
+          <section class="user_full_name">
+            <div class="first_name">
+              <label for="first_name">first name <span class="asterisk" aria-label="required">*</span></label>
+              <input type="text" name="first_name" id="first_name" required>
+              <span class="check"></span>
             </div>
-
-            <div class="user_contact">
-              <div class="email">
-                <label for="user_email">email <span class="asterisk">*</span></label>
-                <input type="email" id="user_email" name="user_email" required>
-              </div>
-              <div class="phone_num">
-                <label for="phone_num">phone number</label>
-                <input type="tel" id="phone_num">
-              </div>
+            <div class="last_name">
+              <label for="last_name">last name <span class="asterisk" aria-label="required">*</span></label>
+              <input type="text" name="last_name" id="last_name" required>
+              <span class="check"></span>
             </div>
+          </section>
 
-            <div class="user_password">
-              <div class="password">
-                <label for="user_password">password <span class="asterisk">*</span></label>
-                <input type="password" id="user_password" name="user_password" required>
-              </div>
-              
-              <div class="confirm_password">
-                <label for="confirm_password">confirm password <span class="asterisk">*</span></label>
-                <input type="password" id="confirm_password" name="confirm_password" required>
-              </div>
+          <section class="user_contact">
+            <div class="email">
+              <label for="user_email">email <span class="asterisk" aria-label="required">*</span></label>
+              <input type="email" id="user_email" name="email" placeholder="example@mail.com" required>
+              <span class="check"></span>
             </div>
-          </div>
+            <div class="phone_num">
+              <label for="phone_num">phone number <span class="asterisk" aria-label="required">*</span></label>
+              <input type="tel" id="phone_num" name="phone_number" placeholder="xxx-xx-xxx" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required>
+              <span class="check"></span>
+            </div>
+          </section>
 
-          <div class="create_account">
-            <button type="submit">Create Account</button>
-            <p>Already have an account? <a href="#" class="login">Log in</a></p>
-          </div>
-        </form>
-      </div>
-      
+          <section class="user_password">
+            <div class="password">
+              <label for="user_password">password <span class="asterisk" aria-label="required">*</span></label>
+              <input type="password" id="user_password" name="password" minlength="5" maxlength="10" title="Please, enter a password between 5 and 10 words or numbers" required>
+              <span class="check"></span>
+            </div>
+            
+            <div class="confirm_password">
+              <label for="confirm_password">confirm password <span class="asterisk" aria-label="required">*</span></label>
+              <input type="password" id="confirm_password" name="confirm_password" required>
+              <span class="error"></span>
+              <span class="check"></span>
+            </div>
+          </section>
+
+          <section class="newsletter">
+            <input type="checkbox" id="check" name="newsletter_check">
+            <label for="check">Send me the newsletter
+            </label>
+          </section>
+        </section>
+
+        <section class="create_account">
+          <button type="submit" id="submit_btn">Create Account</button>
+          <p>Already have an account? <a href="#" class="login">Log in</a></p>
+        </section>
+      </form>
     </section>
+      
+    <!-- footer -->
     <footer>
       <p>made with <span class="icon" title="love"><ion-icon name="heart-outline"></ion-icon></span> by <em>Annd</em> at <span><a class="icon" href="https://github.com/anndcodes/signup-form">
         <ion-icon name="logo-github"></ion-icon>
@@ -82,4 +97,3 @@
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
-

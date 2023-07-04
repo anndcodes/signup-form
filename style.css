@@ -8,7 +8,7 @@
   --shadow: #cdcecf;
   --button-active: #b3c0c9;
   --button-color: #f7fafc;
-  --input-border-focus: #D2DCE2;
+  --input-border-focus: #acc7d6;
 
   /* fonts */
   --zodiak: 'Zodiak', serif;
@@ -35,22 +35,34 @@ body {
   color: var(--text-color);
 }
 
-/* ==== header ==== */
-header {
+
+/* ==== sidebar ==== */
+aside {
   display: flex;
   align-items: flex-end;
   position: relative;
 }
 
-header img {
+.sidebar_image {
   height: max(100vh, 50vh);
 }
 
-.header_footer {
+.sidebar_footer {
   position: absolute;
   width: 100%;
   font-size: 1.4rem;
   color: var(--button-color);
+}
+
+
+/* ==== header ==== */
+.form_header {
+  width: 75%;
+  padding-bottom: 10px;
+}
+
+.form_header h2 {
+  padding-top: 10px;
 }
 
 
@@ -64,16 +76,7 @@ main {
   background: var(--background-color);
 }
 
-.form_desc {
-  width: 75%;
-  padding-bottom: 10px;
-}
-
-.form_desc h2 {
-  padding-top: 10px;
-}
-
-.info {
+.form_info {
   margin: 5rem 0 5rem;
 }
 
@@ -91,7 +94,7 @@ main {
 .login, 
 h2,
 button, 
-.info {
+.form_info {
   font-family: var(--poppins);
 }
 
@@ -112,6 +115,8 @@ label {
 }
 
 input {
+  -webkit-appearance: none;
+  appearance: none;
   border-bottom: 1px solid var(--input-border);
   border-radius: 5px;
   width: 280px;
@@ -121,11 +126,18 @@ input {
   font-family: inherit;
   font-size: 1.5rem;
   margin-bottom: 25px;
-}                                                                                                                                                            
+}   
+
 input:focus {
   box-shadow: 2px 2px 2px 1px var(--shadow);
   outline: none;
   border: 2px solid var(--input-border-focus);
+}
+
+input:placeholder-shown {
+  font-style: italic;
+  font-size: 1.2rem;
+  font-family: inherit;
 }
 
 button {
@@ -151,6 +163,46 @@ button:active {
   box-shadow: 1px 1px 1px 1px var(--shadow);
 }
 
+
+/* ==== newsletter checkbox ==== */
+.newsletter {
+ display: flex;
+ align-items: center;
+ justify-content: flex-start;
+ gap: 5px;
+}
+
+input[type="checkbox"] {
+  width: 1em;
+  height: 1em;
+  padding: 8px;
+  border: 1px solid var(--input-border);
+  margin: 0;
+  transform: translateY(-0.075em);
+  display: grid;
+  place-content: center;
+}
+
+input[type="checkbox"]::before {
+  content: "";
+  width: 0.67em;
+  height: 0.67em;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em var(--input-border-focus);
+  border-radius: 3px;
+}
+
+input[type="checkbox"]:checked::before {
+  transform: scale(1);
+}
+
+.newsletter label {
+  text-transform: none;
+}
+
+
+/* ==== footer ==== */
 footer {
   margin-top: auto;
   text-align: center;
@@ -162,3 +214,4 @@ footer {
 footer em {
   color: var(--primary-color);
 }
+

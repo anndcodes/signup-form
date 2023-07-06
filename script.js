@@ -1,7 +1,7 @@
 // toggle password visibility
 function showPassword() {
-  const togglePwd = document.querySelector(".show-pwd");
-  const toggleConfirmPwd = document.querySelector(".show-confirm-pwd");
+  const togglePwd = document.querySelector(".show_pwd");
+  const toggleConfirmPwd = document.querySelector(".show_confirm_pwd");
   const userPwd = document.getElementById("user_password");
   const confirmPwd = document.getElementById("confirm_password");
 
@@ -24,3 +24,23 @@ function showPassword() {
 }
 
 showPassword()
+
+
+// prevent submit form if inputs aren't filled
+function validateForm() {
+  let nameInput = document.forms["form"]["first_name"].value;
+  let lastNameInput = document.forms["form"]["last_name"].value;
+  let emailInput = document.forms["form"]["email"].value;
+  let phoneInput = document.forms["form"]["phone_number"].value;
+  let pwdInput = document.forms["form"]["password"].value;
+  let confirmPwdInput = document.forms["form"]["confirm_password"].value;
+
+  if(nameInput == "" || lastNameInput == "" || emailInput == "" || phoneInput == "" || pwdInput == "" || confirmPwdInput == "") {
+    const createAccount = document.querySelector(".create_account");
+    const emptyFields = document.createElement("span");
+    emptyFields.classList.add("empty-fields");
+    emptyFields.textContent = "there are fields that aren't filled yet!"
+    createAccount.appendChild(emptyFields);
+    return false;
+  }
+}

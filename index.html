@@ -58,13 +58,14 @@
           <section class="user_password">
             <div class="password">
               <label for="user_password">password <span class="asterisk" aria-label="required">*</span></label>
-              <input type="password" id="user_password" name="password" minlength="6" maxlength="10" title="Please, enter a password between 6 and 10 words or numbers" placeholder=" "><ion-icon name="eye-outline" class="show_pwd"></ion-icon> 
+              <input type="password" id="user_password" name="password" minlength="6" maxlength="10" title="Please, enter a password between 6 and 10 words or numbers" placeholder=" " class="pwd"><ion-icon name="eye-outline" class="show_pwd"></ion-icon> 
               <span class="check"></span>
+              <div class="check-pwd"><span class="wrong-pwd"></span></div>
             </div>
             
             <div class="confirm_password">
               <label for="confirm_password">confirm password <span class="asterisk" aria-label="required">*</span></label>
-              <input type="password" id="confirm_password" name="confirm_password" minlength="6" maxlength="10" placeholder=" "><ion-icon name="eye-outline" class="show_confirm_pwd"></ion-icon> 
+              <input type="password" id="confirm_password" name="confirm_password" minlength="6" maxlength="10" placeholder=" " class="pwd"><ion-icon name="eye-outline" class="show_confirm_pwd"></ion-icon> 
               <span class="check"></span>
             </div>
           </section>
@@ -79,6 +80,7 @@
         <section class="create_account">
           <button type="submit" id="submit_btn">Create Account</button>
           <p>Already have an account? <a href="#" class="login">Log in</a></p>
+          <span class="empty-fields"></span>
         </section>
       </form>
     </section>

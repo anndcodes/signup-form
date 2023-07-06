@@ -36,11 +36,56 @@ function validateForm() {
   let confirmPwdInput = document.forms["form"]["confirm_password"].value;
 
   if(nameInput == "" || lastNameInput == "" || emailInput == "" || phoneInput == "" || pwdInput == "" || confirmPwdInput == "") {
-    const createAccount = document.querySelector(".create_account");
-    const emptyFields = document.createElement("span");
-    emptyFields.classList.add("empty-fields");
+    const emptyFields = document.querySelector(".empty-fields");
     emptyFields.textContent = "there are fields that aren't filled yet!"
-    createAccount.appendChild(emptyFields);
     return false;
   }
 }
+
+
+// check if passwords match 
+let password = document.getElementById("user_password");
+let confirmPassword = document.getElementById("confirm_password");
+let pwdInputs = document.querySelectorAll(".pwd")
+let createAccount = document.getElementById("submit_btn").addEventListener("click", () => matchPassword());
+
+// color inputs red if they do not match
+pwdInputs.forEach(pwd => {
+  pwd.addEventListener("input", function() {
+    if(password.value !== confirmPassword.value) {
+      password.style.border = "1px solid red";
+      confirmPassword.style.border = "1px solid red"
+    } else {
+      password.style.border = "transparent";
+      password.style.borderBottom = "1px solid #988D7D";
+      confirmPassword.style.border = "transparent";
+      confirmPassword.style.borderBottom = "1px solid #988D7D";
+    }
+  })
+})
+
+// prevent submit form if passwords do not match
+function matchPassword() {
+  if(confirmPassword.value !== password.value){
+    confirmPassword.value = null;
+    password.value = null;
+    password.style.border = "1px solid red";
+    confirmPassword.style.border = "1px solid red";
+    let wrongPwd = document.querySelector(".wrong-pwd");
+    wrongPwd.textContent = "* passwords do not match!"
+    createAccount.setAttribute("disabled", "")
+  } else {
+    wrongPwd.textContent ="";
+    password.style.border = "";
+    confirmPassword.style.border = "";
+  }
+}
+
+
+
+
+
+
+
+
+

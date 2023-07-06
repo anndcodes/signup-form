@@ -180,6 +180,15 @@ input[type="checkbox"]:not(:focus):not(:placeholder-shown):valid {
   color: var(--primary-color);
 }
 
+input[type="password"] {
+ margin-bottom: 5px;
+}
+
+.wrong-pwd {
+  color: red;
+  font-size: 1.2rem;
+}
+
 /* ==== button ==== */
 button {
   background: var(--primary-color);
@@ -218,6 +227,7 @@ button:active {
  align-items: center;
  justify-content: flex-start;
  gap: 5px;
+ margin-top: 25px;
 }
 
 input[type="checkbox"] {

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Account Created</title>
+  <link href="https://api.fontshare.com/v2/css?f[]=zodiak@901,700,800,401,400,801,701,900&f[]=poppins@401,301,500,400,300,501&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="assets/coffee-cup.png" type="image/x-icon">
+  <style>
+    :root {
+      /* colors */
+      --primary-color: #76bde6;
+      --secundary-color: #f7fafc;
+      --shadow: #cadae2;
+
+      /* fonts */
+      --zodiak: 'Zodiak', serif;
+      --poppins: 'Poppins', sans-serif;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      text-decoration: none;
+    }
+
+    html {
+      font-size: 62.5%;
+    }
+
+    body{
+      background-image: url(assets/signupimage.png);
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      background-size: cover ;
+      display: flex;
+      flex-direction: column;
+      font-family: var(--zodiak);
+    }
+    
+    main {
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    header {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    header h1 {
+      color: var(--primary-color);
+      font-size: 4.5rem;
+    }
+    
+    header h3 {
+      font-size: 2rem;
+      width: 60%;
+      color: var(--secundary-color);
+      font-family: var(--poppins);
+    }
+
+    span {
+      color: var(--primary-color);
+    }
+
+    button {
+      background: transparent;
+      color: var(--secundary-color);
+      width: 130px;
+      height: 40px;
+      font-family: var(--poppins);
+      font-size: 1.6rem;
+      font-weight: 600;
+      border: 1px solid var(--primary-color);
+      border-radius: 7px;
+      cursor: pointer;
+    }    
+
+    button:hover {
+      transform: translateY(-1px);
+      box-shadow: 3px 2px 1px 1px var(--shadow);
+      background: var(--primary-color);
+    }
+
+    button:active {
+      background: var(--primary-color);
+      box-shadow: none;
+    }
+
+    footer {
+      margin-top: -4rem;
+      font-size: 1.5rem;
+      display: flex;
+      justify-content: center;
+      gap: 13px;
+    }
+
+    .icon,
+    .link_credit,
+      footer em {
+      color: var(--secundary-color);
+    }
+
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Thanks for signing up! </h1>
+      <h3>Don't wait more time, and order a coffee while reading our newsletter of the week <span>:)</span></h3>
+      <button>Order</button>
+    </header>
+  </main>
+  
+  <footer>
+    <p>made with <span class="icon" title="love"><ion-icon name="heart-outline" class="footer_icon"></ion-icon></span> by <em>Annd</em> at <span><a class="icon" href="https://github.com/anndcodes/signup-form">
+      <ion-icon name="logo-github" class="footer_icon"></ion-icon>
+    </a></span></p> <span class="icon">•</span>
+    <p>Photo by <a class="link_credit" href="https://unsplash.com/photos/j2SZHDrMgsE">Frame Harirak</a> on <a href="https://unsplash.com/" class="link_credit">Unsplash</a></p>
+  </footer>
+
+  <!-- ==== icons script ==== -->
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+ 
+</body>
+</html>

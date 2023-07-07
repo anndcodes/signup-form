@@ -177,7 +177,7 @@ input[type="checkbox"]:not(:focus):not(:placeholder-shown):valid {
 }
 
 .empty-fields {
-  color: var(--primary-color);
+  color: red;
 }
 
 input[type="password"] {

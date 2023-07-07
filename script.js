@@ -55,6 +55,11 @@ pwdInputs.forEach(pwd => {
     if(password.value !== confirmPassword.value) {
       password.style.border = "1px solid red";
       confirmPassword.style.border = "1px solid red"
+    } else if(password.value === confirmPassword.value) {
+      password.style.border = "transparent";
+      password.style.borderBottom = "1px solid green";
+      confirmPassword.style.border = "transparent";
+      confirmPassword.style.borderBottom = "1px solid green";
     } else {
       password.style.border = "transparent";
       password.style.borderBottom = "1px solid #988D7D";
